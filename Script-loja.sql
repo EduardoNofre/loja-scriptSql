@@ -33,8 +33,12 @@ CREATE TABLE produtos
    descriptionProd  varchar(250),
    commentProd      varchar(250),
    imageProd        varchar(250),
+   linkVideo        varchar(250),
+   whatsApp         varchar(250),
+   email            varchar(250),
+   comprarLink      varchar(250),
    idusuario        int(10),
-   idstatus         int(10),
+   idstatus         int(10),		
   FOREIGN KEY (idusuario) REFERENCES usuario(idUsuario),
   FOREIGN KEY (idstatus) REFERENCES tipoStatus(idstatus)
 )
