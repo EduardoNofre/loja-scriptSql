@@ -43,6 +43,34 @@ CREATE TABLE produtos
   FOREIGN KEY (idstatus) REFERENCES tipoStatus(idstatus)
 )
 
+--05
+CREATE TABLE configView
+(
+   idconfigView             int(10) PRIMARY KEY auto_increment,
+   -- text head x footer
+   headText                 varchar(250),
+   footerText               varchar(250),
+   -- color  head x footer
+   headColor                varchar(250),
+   footerColor              varchar(250),
+   -- fonte  head x footer
+   headFont                 varchar(250),
+   footerFont               varchar(250),
+   -- fonte size  head x footer
+   headFontSize             varchar(250),
+   footerFontSize           varchar(250),
+   -- img log path
+   imgLogo                  varchar(250),
+   -- fonte
+   registroAutoralText      varchar(250),
+   -- coluna x linha
+   gridColum                int(10),
+   gridLinha                int(10),
+   idusuario                int(10),
+   idstatus                 int(10),
+  FOREIGN KEY (idusuario) REFERENCES usuario(idUsuario),
+  FOREIGN KEY (idstatus) REFERENCES tipoStatus(idstatus)
+)
 -- status
 insert into tipostatus (name,dscStatus)values('Ativo','Ativo');
 insert into tipostatus (name,dscStatus)values('Excluido','Excluido');
