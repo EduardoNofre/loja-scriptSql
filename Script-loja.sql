@@ -30,16 +30,16 @@ FOREIGN KEY (idstatus) REFERENCES tipoStatus(idstatus)
 CREATE TABLE produtos
 (
    idProduto        int(10) PRIMARY KEY auto_increment,
-   nameProd         varchar(250),
-   descriptionProd  varchar(250),
-   commentProd      varchar(250),
-   imageProd        varchar(250),
+   nomeProd         varchar(250),
+   descProduto      varchar(250),
+   comentarioPord   varchar(250),
+   imagemProd       varchar(250),
    linkVideo        varchar(250),
    whatsApp         varchar(250),
    email            varchar(250),
    comprarLink      varchar(250),
    idusuario        int(10),
-   idstatus         int(10),		
+   idstatus         int(10),
   FOREIGN KEY (idusuario) REFERENCES usuario(idUsuario),
   FOREIGN KEY (idstatus) REFERENCES tipoStatus(idstatus)
 )
