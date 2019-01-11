@@ -14,13 +14,13 @@ dscStatus VARCHAR(30) NOT NULL
 --03
 CREATE TABLE usuario (
 idUsuario INT(6) AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(30) NOT NULL,
-lastName VARCHAR(30) NOT NULL,
+nome VARCHAR(30) NOT NULL,
+ultimoNome VARCHAR(30) NOT NULL,
 email VARCHAR(50),
-password VARCHAR(250),
+senha VARCHAR(250),
 foto VARCHAR(250),
-regdate TIMESTAMP,
-lastacess TIMESTAMP,
+dtregistro TIMESTAMP,
+ultimoAcesso TIMESTAMP,
 idperfil int (10),
 idstatus int (10),
 FOREIGN KEY (idperfil) REFERENCES perfil(idperfil),
