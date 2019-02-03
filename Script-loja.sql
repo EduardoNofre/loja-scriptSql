@@ -72,6 +72,16 @@ CREATE TABLE configView
   FOREIGN KEY (idusuario) REFERENCES usuario(idUsuario),
   FOREIGN KEY (idstatus) REFERENCES tipoStatus(idstatus)
 )
+
+--06
+create table configServidor(
+idconfigServidor int  (8) auto_increment primary key,
+nomeServidor varchar (250),
+caminhorepositorio varchar (250),
+idusuario int  (8),
+FOREIGN KEY (idusuario) REFERENCES usuario(idusuario)
+)
+
 -- status
 insert into tipostatus (name,dscStatus)values('Ativo','Ativo');
 insert into tipostatus (name,dscStatus)values('Excluido','Excluido');
@@ -86,3 +96,5 @@ insert into usuario (name,lastname,email,regdate,lastacess,password)values('edua
 insert into perfil (perfil,dscPerfil)values('Admin','Administrador');
 insert into perfil (perfil,dscPerfil)values('Alteracoa','Alteração');
 insert into perfil (perfil,dscPerfil)values('Inclusao','Inclusão');
+
+
